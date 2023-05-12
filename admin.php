@@ -46,9 +46,11 @@
     <div class="card-body">
   <center>
   <div class="container">
-    <div class="row">
-      <div class="col"> <button type="button" class="btn btn-success">Награда</button></div>
-      <div class="col"> <button type="button" class="btn btn-danger">Наказание</button> </div>
+    <div class="row" style="margin-top:10%; margin-bottom:10%;">
+      <div class="col"></div>
+      <div class="col"><button type="button" class="btn btn-success" style="">Награда</button></div>
+      <div class="col"><button type="button" class="btn btn-danger">Наказание</button> </div>
+      <div class="col"></div>
     </div>
   </div>
   </center>
