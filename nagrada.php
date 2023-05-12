@@ -42,20 +42,6 @@
       </div>
     </nav>
 
-  <div class="card" style="width: 40%; margin: auto; margin-top:8%;">
-    <div class="card-body">
-  <center>
-  <div class="container">
-    <div class="row" style="margin-top:10%; margin-bottom:10%;">
-      <div class="col"></div>
-      <div class="col"><button type="button" class="btn btn-success" style="font-size: 40px;" onclick="window.location.href = 'nagrada.php';">Награда</button></div>
-      <div class="col"><button type="button" class="btn btn-danger" style="font-size: 40px;" onclick="window.location.href = 'nakazanie.php';">Наказание</button> </div>
-      <div class="col"></div>
-    </div>
-  </div>
-  </center>
-  </div>
-</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   
   </body>
