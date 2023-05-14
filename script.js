@@ -1,5 +1,5 @@
-function send() {
-    // получаем значения из полей ввода
+$( document ).ready(function() {
+  $('#submit').bind("click", function() {
     var email = $("#ll").val();
     var password = $("#pp").val();
   
@@ -22,5 +22,5 @@ function send() {
         alert("Error sending request to server");
       },
     });
-  }
-  
+  });
+});  

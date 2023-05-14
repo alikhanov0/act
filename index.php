@@ -20,7 +20,7 @@
         <div class="card bg-dark text-white" style="border-radius: 1rem; height: 530px;">
           <div class="card-body p-5 text-center" style="padding-bottom: 0px; height:auto;">
 
-          <form action="" method="post">
+          <form>
             <div class="mb-md-5 mt-md-4 pb-5">
 
               <h2 class="fw-bold mb-2 text-uppercase">Войти</h2>
@@ -35,7 +35,7 @@
                 <input type="password" class="form-control form-control-lg" placeholder="••••••••" id="pp"/>
                 <label class="form-label" for="typePasswordX">Пароль</label>
               </div>
-              <button onclick="send()" class="btn btn-outline-light btn-lg px-5" type="submit" style="margin-top: 20px;" id="submit">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" type="submit" style="margin-top: 20px;" id="submit">Login</button>
             </div>
             </form>
 
