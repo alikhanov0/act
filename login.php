@@ -8,7 +8,7 @@ $password = $_POST['password'];
 $_SESSION['email'] = $email;
 
 // Check in admin table
-$sql = "SELECT * FROM `admin` WHERE `email` = '$email' AND password = '$password'";
+$sql = "SELECT * FROM `admin` WHERE `email` = '$email' AND `password` = '$password'";
 $result = $conn->query($sql);
 if ($result->rowCount() > 0) {
   // Return a success response with the role
@@ -18,7 +18,7 @@ if ($result->rowCount() > 0) {
 }
 
 // Check in teachers table
-$sql = "SELECT * FROM `teachers` WHERE `email` = '$email' AND password = '$password'";
+$sql = "SELECT * FROM `teachers` WHERE `email` = '$email' AND `password` = '$password'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // Return a success response with the role
@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
 }
 
 // Check in curators table
-$sql = "SELECT * FROM `curators` WHERE `email` = '$email' AND password = '$password'";
+$sql = "SELECT * FROM `curators` WHERE `email` = '$email' AND `password` = '$password'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // Return a success response with the role
