@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
 }
 
 // Check in students table
-$sql = "SELECT * FROM `students` WHERE email = '$email' AND password = '$password'";
+$sql = "SELECT * FROM `students` WHERE `email` = '$email' AND password = '$password'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // Return a success response with the role
