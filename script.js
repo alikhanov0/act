@@ -12,16 +12,7 @@ function send() {
         const obj = JSON.parse(response);
         // если авторизация успешна
         if (obj.status === "true") {
-          // перенаправляем на страницу в зависимости от роли
-          if (obj.role === "admin") {
-            window.location.href = 'admin.php';
-          } else if (obj.role === "teacher") {
-            window.location.href = 'teacher.php';
-          } else if (obj.role === "curator") {
-            window.location.href = 'curator.php';
-          } else if (obj.role === "student") {
-            window.location.href = 'student.php';
-          }
+          window.location.href = "admin.php";
         } else {
           // иначе выводим ошибку
           alert("Error");
