@@ -15,7 +15,7 @@ function send() {
           window.location.href = "admin.php";
         } else {
           // иначе выводим ошибку
-          alert("Error");
+          alert(obj.message);
         }
       },
       error: function () {
