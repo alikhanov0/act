@@ -35,7 +35,7 @@
                 <input type="password" class="form-control form-control-lg" placeholder="••••••••" id="pp"/>
                 <label class="form-label" for="typePasswordX">Пароль</label>
               </div>
-              <button class="btn btn-outline-light btn-lg px-5" type="submit" style="margin-top: 20px;" id="submit">Login</button>
+              <button class="btn btn-outline-light btn-lg px-5" style="margin-top: 20px;" onclick="send()">Login</button>
             </div>
             </form>
 
