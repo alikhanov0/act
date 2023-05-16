@@ -42,35 +42,29 @@
       </div>
     </nav>
 
-    <div class="card" style="width: 60%; margin: auto; margin-top:8%;">
+    <div class="card" style="width: 50%; margin: auto; margin-top:8%;">
     <div class="card-body">
   <center>
   <div class="container">
+    <form action="">
     <div class="row" style="margin-top:10%; margin-bottom:10%;">
-    <label class="my-1 mr-2" for="inlineFormCustomSelectPref" style="font-size:30px; padding-bottom:3%;">Выберите тип нарушения</label>
+        <h1>Выберите тип нарушения</h1>
+    <p style="padding-top:5%">
+        <select>
+            <option>er</option>
+            <option>br</option>
+        </select>
+    </p>
     <center>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="width:20%;">
-    <option selected>Choose...</option>
-    <?php
-      include 'connect.php';
-
-      $sql = "SELECT `category` FROM `act_category`";
-      $res = $conn->query($sql);
-
-      while($row = $res->fetch(PDO::FETCH_ASSOC)){
-        echo "<option>" . $row['category'] . "</option>";
-      }
-
-      $conn = null;
-    ?>
-  </select>
-  </center>
-  <div class="row">
+        <p>Ваш комментарий</p>
+    <input type="text" name="" id="" style="width:50%">
+    </center>
     <center>
-    <button type="button" style="font-size: 20px; width:30%; margin-top:3%" class="btn btn-primary">Далее</button>
+    <button type="button" style="font-size: 20px; width:40%; margin-top:5%" class="btn btn-primary">Написать акт</button>
     </center>
   </div>
-  </div>
+  </form>
+</div>
   </center>
   </div>
 </div>
