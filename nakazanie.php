@@ -42,7 +42,7 @@
       </div>
     </nav>
 
-    <div class="card" style="width: 60%; margin: auto; margin-top:8%;">
+    <div class="card" style="width: 60%; margin: auto; margin-top:8%;" id="first">
     <div class="card-body">
   <center>
   <div class="container">
@@ -67,7 +67,74 @@
   </center>
   <div class="row">
     <center>
-    <button type="button" style="font-size: 20px; width:30%; margin-top:3%" class="btn btn-primary">Далее</button>
+    <button type="button" style="font-size: 20px; width:30%; margin-top:3%" class="btn btn-primary" id="button1" onclick="toSecond()">Далее</button>
+    </center>
+  </div>
+  </div>
+  </center>
+  </div>
+</div>
+
+
+
+<div class="card" style="width: 60%; margin: auto; margin-top:8%;" id="second">
+    <div class="card-body">
+  <center>
+  <div class="container">
+    <div class="row" style="margin-top:10%; margin-bottom:10%;">
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref" style="font-size:30px; padding-bottom:3%;">Выберите ученика</label>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+      <p>Выберите класс</p>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="width:20%;">
+    <option selected>Choose...</option>
+    <?php
+      include 'connect.php';
+
+      $sql = "SELECT `grade` FROM `classes`";
+      $res = $conn->query($sql);
+
+      while($row = $res->fetch(PDO::FETCH_ASSOC)){
+        echo "<option>" . $row['grade'] . "</option>";
+      }
+
+      $conn = null;
+    ?>
+  </select>
+  </div>
+
+  <div class="col">
+  <p>Выберите литер</p>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="width:20%;">
+    <option selected>Choose...</option>
+    <?php
+      include 'connect.php';
+
+      $sql = "SELECT `liter` FROM `classes`" ;
+      $res = $conn->query($sql);
+
+      while($row = $res->fetch(PDO::FETCH_ASSOC)){
+        echo "<option>" . $row['grade'] . "</option>";
+      }
+
+      $conn = null;
+    ?>
+  </select>
+  </div>
+
+  <div class="col"></div>
+  </div>
+  <div class="row">
+    <center>
+    <div class="row">
+      <div class="col">
+      <button type="button" style="font-size: 20px; width:30%; margin-top:3%" class="btn btn-danger" onclick="backTo1()">Назад</button>
+      </div>
+      <div class="col">
+      <button type="button" style="font-size: 20px; width:30%; margin-top:3%" class="btn btn-primary">Далее</button>
+      </div>
+    </div>
     </center>
   </div>
   </div>
@@ -78,6 +145,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  
+  <script src="nakazanie.js"></script>
   </body>
 </html>

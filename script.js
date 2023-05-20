@@ -1,7 +1,6 @@
 function send() {
   var email = $("#ll").val();
   var password = $("#pp").val();
-  
   // отправляем данные на сервер
   $.ajax({
     type: "POST",

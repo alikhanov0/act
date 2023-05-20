@@ -46,17 +46,34 @@
     <div class="card-body">
   <center>
   <div class="container">
+    <div class="row">
+      <h2>Имя:
+        <?php
+        echo $_COOKIE["first_name"];
+        ?>
+      </h2>
+      <h2>Фамилия:
+        <?php
+        echo $_COOKIE['last_name'];
+        ?>
+      </h2>
+      <h2>Роль:
+        <?php
+        echo $_COOKIE['role'];
+        ?>
+      </h2>
+    </div>
     <div class="row" style="margin-top:10%; margin-bottom:10%;">
       <div class="col"></div>
-      <div class="col"><button type="button" class="btn btn-success" style="font-size: 40px;" onclick="window.location.href = 'nagrada.php';">Награда</button></div>
-      <div class="col"><button type="button" class="btn btn-danger" style="font-size: 40px;" onclick="window.location.href = 'nakazanie.php';">Наказание</button> </div>
+      <div class="col" id="buttond"><button type="button" class="btn btn-success" style="font-size: 40px; display: none;" onclick="doFunc()" id="button1">Награда</button></div>
+      <div class="col" id="button2d"><button type="button" class="btn btn-danger" style="font-size: 40px; display: none;" onclick="window.location.href = 'nakazanie.php';" id="button2">Наказание</button></div>
       <div class="col"></div>
     </div>
   </div>
   </center>
   </div>
 </div>
+    <script src="checkrole.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  
   </body>
 </html>
